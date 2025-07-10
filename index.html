@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libertinus+Mono&family=Poppins:ital,wght@0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melhores Escolhas de Pizza</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <img src="./Design sem nome.jpg" alt="Logo Pizza">
+    </header>
+    <main>
+        <section>
+            <div>
+                <h2>MELHORES ESCOLHAS DE PIZZA</h2>
+               <p> aqui vou vai ver como seu paladar importa </p>
+
+                    <form id="form">
+                        <input id="apiKey" type="password" placeholder="informe a API KEY do Gemini"required >
+
+                        <select id="pizzaselect">
+                            <option value=""> selecione uma pizza </option>
+                            <option value="tradicional">tradicional</option>
+                            <option value="Calabresa">Calabresa</option>
+                            <option value="Mussarela">Mussarela</option>
+                            <option value="Portuguesa">Portuguesa</option>
+                            <option value="Frango com Catupiry">Frango com Catupiry</option>
+                            <option value="Marguerita">Marguerita</option>
+                        </select> 
+                            <input id="selecionarinput"  type="text" placeholder="ex: melhores pizza para voce comer quando estiver confuso.........">
+                            <button id="aksbutton">
+                                pergunta
+                            </button>
+                    </form>
+                        <div id="aiResposta"> 
+                            <div class="response-content">
+                                </div> 
+                        </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+    <script src="./scripi.js"></script>
+</body>
+</html>
