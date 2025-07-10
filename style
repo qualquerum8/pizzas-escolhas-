@@ -1,0 +1,211 @@
+/* Seu CSS Existente (MANTENHA ISSO IGUAL AO SEU ORIGINAL QUE FUNCIONAVA BEM) */
+
+h2 {
+    color: black;
+    /* Adicione um padding ou margin aqui se quiser separar do topo da div */
+}
+
+h4 {
+    color: black; /* Ajuste a cor se necessário */
+    /* Adicione um padding ou margin aqui se quiser separar de h2 ou da div */
+}
+
+body {
+    background-image: url("./ass/fundo h.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body * {
+    font-family: "Inter";
+}
+
+header {
+    padding: 2rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+header img {
+    width: 15rem;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+main {
+    max-width: 36rem;
+    width: 90%;
+    margin: 3rem auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    background-image: linear-gradient(90deg, #fa9240 0%, #d57430 50%, #b15520 100%);
+    border-radius: 0.625rem;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section > div {
+    background-color: #F5DEB3 ;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    /* Remover display:flex e gap aqui se eles quebrarem seu layout original.
+       O layout original da sua captura de tela (90) parece ser baseado em fluxo normal ou bloqueio.
+       Se a imagem 90 for o objetivo, remova quaisquer `display:flex` ou `grid` desta div. */
+}
+form{
+    display: flex;
+    gap:0.85rem;
+    flex-wrap: wrap;
+    margin: 1.25rem; /* Mantenha a margem original para o formulário */
+}
+
+form input, form select {
+    all: unset;
+    border: 2px solid #D35400;
+    border-radius: 0.5rem;
+    padding: 0.675rem;
+    background-color: aliceblue;  
+}
+form input{
+    flex: 1;
+}
+button{
+    width: 100%;
+    border: 0;
+    background-image: linear-gradient(90deg, #d6d396 0%, #c5c5c550 50%, #bab77b 100%);
+    padding: 0.675rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+button:hover {
+    cursor: pointer;
+    transform: translateY(-4px);
+}
+button:disabled{
+    transition: initial;
+    transform: initial;
+    opacity: 0.5; /* Ajuste para que seja visível mas desabilitado */
+    cursor: not-allowed;
+}
+
+.loading{
+    animation: pulse 1s infinite ;
+}
+@keyframes pulse{
+    50%{
+        opacity: 0.5;
+    }
+}
+
+/* --- NOVOS ESTILOS PARA A RESPOSTA DA IA, MANTENDO SEU LAYOUT --- */
+
+#aiResposta {
+    /* Não adicione background-color ou padding aqui se 'section > div' já os tem e você quer que a caixa seja contínua */
+    /* Apenas dê um margin-top para separar da parte de cima (formulário) */
+    margin-top: 1.5rem; /* Ajuste este valor para controlar o espaçamento entre o botão e a resposta */
+    width: 100%; /* Garante que ocupe a largura disponível */
+    box-sizing: border-box; /* Importante para padding e borda */
+    /* Remova qualquer background-color ou box-shadow que possa estar quebrando o layout */
+}
+
+/* Estilize o conteúdo DENTRO da resposta da IA */
+#aiResposta .response-content {
+    /* Certifique-se de que o conteúdo não saia da div */
+    max-width: 100%;
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    word-wrap: break-word;
+    /* Se quiser um padding interno extra apenas para o conteúdo da IA */
+    /* padding: 1rem; */
+}
+
+/* Estilos para os elementos HTML (h1, p, ul, li, strong) GERADOS PELO MARKDOWN */
+#aiResposta .response-content h1,
+#aiResposta .response-content h2,
+#aiResposta .response-content h3,
+#aiResposta .response-content h4,
+#aiResposta .response-content h5,
+#aiResposta .response-content h6 {
+    color: #2c3e50; /* Cor escura para os títulos */
+    margin-top: 1.2em; /* Espaço acima dos títulos */
+    margin-bottom: 0.6em; /* Espaço abaixo dos títulos */
+    line-height: 1.3;
+    font-family: "Poppins", sans-serif; /* Se quiser uma fonte diferente para títulos da IA */
+    text-align: left; /* Títulos da IA geralmente são à esquerda */
+}
+
+#aiResposta .response-content h1 {
+    font-size: 1.8em;
+    border-bottom: 1px solid #ddd; /* Linha sutil */
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+}
+
+#aiResposta .response-content h2 {
+    font-size: 1.5em;
+}
+
+#aiResposta .response-content h3 {
+    font-size: 1.3em;
+}
+
+#aiResposta .response-content p {
+    color: #34495e; /* Cor para o texto normal da IA */
+    line-height: 1.6;
+    margin-bottom: 1em;
+    text-align: left; /* Parágrafos da IA à esquerda */
+}
+
+#aiResposta .response-content ul,
+#aiResposta .response-content ol {
+    color: #34495e;
+    margin-left: 1.8em; /* Recuo para listas */
+    padding-left: 0;
+    margin-bottom: 1em;
+    text-align: left; /* Garante alinhamento esquerdo para listas */
+}
+
+#aiResposta .response-content li {
+    margin-bottom: 0.6em; /* Espaço entre itens da lista */
+    line-height: 1.5;
+}
+
+#aiResposta .response-content strong,
+#aiResposta .response-content b {
+    font-weight: 700;
+    color: #D35400; /* Cor para negrito na resposta da IA */
+}
+
+#aiResposta .response-content em,
+#aiResposta .response-content i {
+    font-style: italic;
+    color: #6c7a89;
+}
+
+/* Se a IA gerar código ou blockquotes, adicione estilos aqui também */
+#aiResposta .response-content pre {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+#aiResposta .response-content code {
+    font-family: 'Libertinus Mono', monospace;
+    font-size: 0.9em;
+    color: #c7254e;
+}
